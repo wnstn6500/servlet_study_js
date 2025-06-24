@@ -11,5 +11,9 @@
 	<h1><%= request.getAttribute("name") %>님, 환영합니다</h1>
 	<h2>앞으로도 자주 와주실꺼죠?</h2>
 	<a href="/">홈페이지로 이동</a>
+	
+	<h1>반가워요<%= request.getAttribute("id") %>님</h1>
+	<h2>비밀번호가 <%= request.getAttribute("pw") %>!이시네요~</h2>
+	<a href="/">홈페이지로 이동</a>
 </body>
 </html>

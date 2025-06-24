@@ -1,5 +1,6 @@
 package com.gn.mapping;
 
+import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
@@ -60,6 +61,13 @@ public class SendPostServlet extends HttpServlet {
 				
 				// 4. 쌓여있는 데이터 밀어내기
 //				out.flush();
+		
+		RequestDispatcher view = request.getRequestDispatcher("views/joinSuccess.jsp"); 
+		// 2. JSP에게 데이터를 넘겨주기
+		request.setAttribute("id", id);
+		request.setAttribute("pw", pw);
+		// 3. 화면을 JSP에게 넘기고, 응답을 JSP에게 맡기기
+		view.forward(request, response);
 		
 	}
 
