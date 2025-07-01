@@ -15,7 +15,7 @@
 		  5. Mapper에 있는 쿼리 실행 -->
 	<ol>
 		<li>
-			<a href="<c:url value='student/list'/>">학생 목록 조회</a>
+			<a href="<c:url value='/student/list'/>">학생 목록 조회</a>
 		</li>
 	</ol>	  
 		  
