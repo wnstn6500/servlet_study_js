@@ -38,6 +38,7 @@ public class MemberCreateServlet extends HttpServlet {
 		
 		// Service -> Dao -> Interface -> mapper
 		
+		
 		JSONObject obj = new JSONObject();
 		obj.put("res_code", "500");
 		obj.put("res_msg", "회원가입 중 오류가 발생했습니다");

@@ -15,10 +15,18 @@ public class MemberService {
 	
 	public int insertMember(String id, String pw) {
 		Member member = new Member();
-		member.setId(id);
-		member.setPw(pw);
+		member.setMemberId(id);
+		member.setMemberPw(pw);
 		
-		return dao.insertMember(member);
+		return dao.insert(member);
+	}
+	
+	public Member selectMember(String memberId, String memberPw) {
+		Member member = new Member();
+		member.setMemberId(memberId);
+		member.setMemberPw(memberPw);
+		Member result = dao.login(member);
+		return result;
 	}
 
 }
