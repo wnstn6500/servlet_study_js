@@ -1,5 +1,6 @@
 package com.gn.dto;
 
+import jdk.jfr.DataAmount;
 import lombok.Data;
 
 @Data

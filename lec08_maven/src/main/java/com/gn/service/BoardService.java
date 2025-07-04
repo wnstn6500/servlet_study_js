@@ -14,8 +14,24 @@ import com.mysql.cj.Session;
 public class BoardService {
 	private BoardDao boardDao = new BoardDao();
 	
-	public List<Board> selectBoardList(){
-		return boardDao.selectBoardList();
+	public List<Board> selectBoardList(Board param){
+		return boardDao.selectBoardList(param);
+	}
+	
+	public Board selectBoardOne(int boardNo){
+		return boardDao.selectBoardOne(boardNo);
+	}
+	
+	public Attach selectAttachByBoardNo(int boardNo) {
+		return boardDao.selectAttachByBoardNo(boardNo);
+	}
+	
+	public Attach selectAttachByAttachNo(int attachNo) {
+		return boardDao.selectAttachByAttachNo(attachNo);
+	}
+	
+	public int selectBoardCount(Board param) {
+		return boardDao.selectBoardCount(param);
 	}
 	
 	// 게시글 + 파일 트랜젝션 처리
